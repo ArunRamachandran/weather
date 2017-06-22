@@ -1,0 +1,25 @@
+
+body {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.container_wraper {
+	
+	p {
+		font-family: 'Bree Serif', serif;
+		font-size: 30;
+		position: absolute;
+		margin-left: 79%;
+		margin-top: 3%
+	}
+}
