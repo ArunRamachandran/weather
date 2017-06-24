@@ -96,7 +96,9 @@ function updateWeather (data) {
 	_weatherForecastData = data;
 }
 
-
+function getData () {
+	return _weatherForecastData;
+}
 
 weatherForecastStore.dispatchToken = dispatcher.register (action => {
 
