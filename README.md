@@ -19,26 +19,26 @@ git clone git@github.com:ArunRamachandran/weather.git
 ```
 * Open a new terminal & navigate to the cloned respository
 
-* Execute ```*npm install* ```. This will download and install all dependencies that are needed.
+* Execute ```npm install```. This will download and install all dependencies that are needed.
 
 ### Available Scripts
 
 In the project directory, you can run: 
 
 ```
-* npm run dev *
+ npm run dev
 ```
 Runs the app in the development mode.
 Open http://localhost:8080/ to view it in the browser.
 
 ```
-* npm run build *
+ npm run build 
 ```
 Build the app for production to the `build` folder.
 It correctly bundles the React in production mode.
 
 ```
-* npm run test *
+ npm run test 
 ```
 Launches the test runner.
 
