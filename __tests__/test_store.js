@@ -10,8 +10,8 @@ const {
 	EVENT_CONSTANT
 } = AppConstants;
 
-describe('Test WeatherForecastStore', () => {
 
+describe('Test WeatherForecastStore', () => {
 	//mock actions inside dispatch payloads
 	let payLoad = {
 			type: API_CONSTANT.LOAD_DATA,
