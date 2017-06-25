@@ -6,6 +6,7 @@ import ForecastingZone from './ForecastingZone.jsx';
 import {fetchWeatherForecastData} from '../actions/WeatherForecastActions';
 import WeatherForecastStore from '../store/WeatherForecastStore';
 import AppConstants from '../constant/Constants';
+import {formatWeatherForcastingData} from '../utils/formatWeather.js';
 import '../stylesheets/weatherContainer.scss';
 
 const {
@@ -37,8 +38,9 @@ export default class WeatherContainer extends Component {
 	}
 
 	updateWeather = (data) => {
-		this.setState({ weather: data });
-		console.log("Received : ", data);
+		let weather = formatWeatherForcastingData(data);
+		this.setState({ weather: weather });
+		console.log("Received : ", weather);
 	}
 
 	render () {
