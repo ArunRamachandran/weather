@@ -19,42 +19,26 @@ git clone git@github.com:ArunRamachandran/weather.git
 ```
 * Open a new terminal & navigate to the cloned respository
 
-<<<<<<< HEAD
-* Execute __npm install__ . This will download and install all dependencies that are needed.
-=======
-* Execute *npm install* . This will download and install all dependencies that are needed.
->>>>>>> 0f4b3f0b9816acde8cb17e4ad84901bbc17f4d37
+* Execute ```npm install```. This will download and install all dependencies that are needed.
 
 ### Available Scripts
 
 In the project directory, you can run: 
 
 ```
-<<<<<<< HEAD
-__npm run dev__
-=======
-*npm run dev*
->>>>>>> 0f4b3f0b9816acde8cb17e4ad84901bbc17f4d37
+ npm run dev
 ```
 Runs the app in the development mode.
 Open http://localhost:8080/ to view it in the browser.
 
 ```
-<<<<<<< HEAD
-__npm run build__
-=======
-*npm run build*
->>>>>>> 0f4b3f0b9816acde8cb17e4ad84901bbc17f4d37
+ npm run build 
 ```
 Build the app for production to the `build` folder.
 It correctly bundles the React in production mode.
 
 ```
-<<<<<<< HEAD
-__npm run test__
-=======
-*npm run test*
->>>>>>> 0f4b3f0b9816acde8cb17e4ad84901bbc17f4d37
+ npm run test 
 ```
 Launches the test runner.
 
@@ -68,7 +52,3 @@ Planning to make these changes in future, in order to improve the user experienc
 
 * An option to forecast data according to a users choice. This functionality will enable user to choose their own favourite place in order to forecast weather.
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 0f4b3f0b9816acde8cb17e4ad84901bbc17f4d37
