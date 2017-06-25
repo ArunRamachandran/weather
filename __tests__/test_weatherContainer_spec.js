@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-//import {expect} from 'chai';
 
 import WeatherContainer from '../app/components/WeatherContainer.jsx';
 import ForecastingZone from '../app/components/ForecastingZone.jsx';
