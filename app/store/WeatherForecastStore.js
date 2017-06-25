@@ -37,11 +37,6 @@ weatherForecastStore.dispatchToken = dispatcher.register (action => {
 			//const formattedData = formatWeatherForcastingData (action.data);
 			weatherForecastStore.emitChange(EVENT_CONSTANT.DATA_LOADED, action.data);
 			break;
-
-		/*case API_CONSTANT.LOAD_ATTRIBUTES:
-			//updatePokedexAttributes(action.data);
-			weatherForecastStore.emitChange(EVENT_CONSTANT.ATTRIBUTES_LOADED, action.data);
-			break;*/
 	}
 });
 

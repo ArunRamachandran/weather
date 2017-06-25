@@ -1,11 +1,11 @@
 jest.mock('../app/actions/WeatherForecastActions');
-jest.unmock('../__mocks__/request');
+jest.mock('../__mocks__/Request');
 jest.unmock('../app/api/WeatherForecastAPI');
 
 import * as WeatherForecastActions from '../app/actions/WeatherForecastActions';
 import {fetchWeatherForecastData} from '../app/api/WeatherForecastAPI';
 import AppConstants from '../app/constant/Constants';
-import Dispatcher from '../app/dispatcher/Dispatcher';
+import Request from '../__mocks__/Request';
 
 describe('Test forecast API', () => {
 	it('dispatch', () => {
