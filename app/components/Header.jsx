@@ -13,7 +13,7 @@ export default class Header extends Component {
 
 		return (
 			<div className="weatherAPI_headerBar">
-				<p>Weather.io</p>
+				<p>WeatherForecastNow.com</p>
 			</div>
 		);
 	}
