@@ -24,12 +24,9 @@ export default class WeatherContainer extends Component {
 		}
 	}
 	
-	componentWillMount () {
+	componentDidMount() {
 		// Initiating API call to fetch weather forcasting data
 		fetchWeatherForecastData();
-	}
-
-	componentDidMount() {
 		WeatherForecastStore.addChangeListner(EVENT_CONSTANT.DATA_LOADED, this.updateWeather);
 	}
 
