@@ -6,6 +6,7 @@ import ForecastingZone from './ForecastingZone.jsx';
 import {fetchWeatherForecastData} from '../actions/WeatherForecastActions';
 import WeatherForecastStore from '../store/WeatherForecastStore';
 import AppConstants from '../constant/Constants';
+import {Icon} from 'react-mdl';
 import {formatWeatherForcastingData} from '../utils/formatWeather.js';
 import '../stylesheets/weatherContainer.scss';
 
@@ -40,10 +41,14 @@ export default class WeatherContainer extends Component {
 	}
 
 	render () {
-
+		const today = new Date().toLocaleString();;
 		return (
 			<div className="container_wraper">
-				<p>Bangalore, IN</p>
+				<div>
+					<p className="location">Bangalore, IN</p>
+					<img src="./app/images/location_1x_black.png"/>
+					<p className="currentDate">{today}</p>
+				</div>
 				<ForecastingZone weather={this.state.weather}/>
 			</div>
 		);

@@ -15,11 +15,29 @@ body {
 
 .container_wraper {
 	
-	p {
-		font-family: 'Bree Serif', serif;
-		font-size: 30;
+	img {
+		display: inline-block;
 		position: absolute;
-		margin-left: 79%;
-		margin-top: 3%
+		margin-top: 2%;
+		margin-left: 75%;
+		cursor: pointer;
 	}
+
+}
+
+.location {
+	font-family: 'Bree Serif', serif;
+	font-size: 25;
+	position: absolute;
+	margin-left: 79%;
+	margin-top: 3%;
+	display: inline-block;
+}
+
+.currentDate {
+	font-family: 'Bree Serif', serif;
+	font-size: 15;
+	position: absolute;
+	margin-left: 79%;
+	margin-top: 6%;
 }
