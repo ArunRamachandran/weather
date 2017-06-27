@@ -8,7 +8,7 @@ import AppConstants from '../app/constant/Constants';
 import Request from '../__mocks__/Request';
 
 describe('Test forecast API', () => {
-	it('dispatch', () => {
+	it('Should dispatch an action once it complete the API call', () => {
 		return fetchWeatherForecastData().then(() => {
 			expect(WeatherForecastActions.weatherLoaded).toBeCalled();
 		})

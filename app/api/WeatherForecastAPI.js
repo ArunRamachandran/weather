@@ -14,7 +14,7 @@ export function fetchWeatherForecastData (location) {
 
 	return Request.get(url)
 		.then((body, res) => {
-			console.log("data : ", body);
+			//console.log("data : ", body);
 			WeatherForecastActionCreator.weatherLoaded(body);
 		});
 }

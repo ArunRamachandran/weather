@@ -12,8 +12,6 @@ const {
 } = AppConstants;
 
 let _weatherForecastData = null;
-let _dateList = [];
-let _formattedWeatherData = []
 
 const weatherForecastStore = createStore ({
 	currentState () {
@@ -25,16 +23,11 @@ function updateWeather (data) {
 	_weatherForecastData = data;
 }
 
-function getData () {
-	return _weatherForecastData;
-}
-
 weatherForecastStore.dispatchToken = dispatcher.register (action => {
 
 	switch (action.type) {
 		case API_CONSTANT.LOAD_DATA:
 			updateWeather(action.data);
-			//const formattedData = formatWeatherForcastingData (action.data);
 			weatherForecastStore.emitChange(EVENT_CONSTANT.DATA_LOADED, action.data);
 			break;
 	}

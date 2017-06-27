@@ -1,9 +1,12 @@
 
+/**
+ * @description : Function to format the received forcasting data according to the 
+ *              next 5 days 
+ */
 function formatWeatherForcastingData (weather) {
 	const currentDate = weather.list[0].dt_txt && weather.list[0].dt_txt.split(" ")[0]; // Extracting YYYY-mm-dd from the date time string
 	const dateList = getForecastingDates(currentDate);
 	const data = getForecastingContents(weather, dateList);
-	//_formattedWeatherData = data;
 	return data;
 }
 
