@@ -71,8 +71,8 @@ export default class ForecastingZone extends Component {
 			const temp = (forecastingData.main.temp - 273.15).toFixed(2); // converting temp to degree celsius 
 			const img = this.getMatchingIcons(forecastingData.weather[0].main);
 			return (
-				<div className="cardViews">
-					<Card key={index} shadow={0} style={cardStyle} className="weatherCards">
+				<div className="cardViews" key={index}>
+					<Card shadow={0} style={cardStyle} className="weatherCards">
 						<CardTitle className="weatherCardTitle" expand style={{background: 'url(./app/images/'+ `${img}` +'.png)' + ' bottom right 15% no-repeat #46B6AC'}}>
 							{temp} °C
 						</CardTitle>
@@ -96,7 +96,10 @@ export default class ForecastingZone extends Component {
 
 		return (
 				<div className="forecastingLayout">
-					{this.props.weather ? this.renderData(this.props.weather) : "Loading .."}
+					{this.props.weather ? 
+						this.renderData(this.props.weather) : 
+						<h4>Loading ..</h4>
+					}
 				</div>
 		);
 

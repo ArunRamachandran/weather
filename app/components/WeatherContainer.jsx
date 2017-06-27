@@ -37,7 +37,6 @@ export default class WeatherContainer extends Component {
 	updateWeather = (data) => {
 		let weather = formatWeatherForcastingData(data);
 		this.setState({ weather: weather });
-		console.log("Received : ", weather);
 	}
 
 	render () {
