@@ -73,7 +73,7 @@ export default class ForecastingZone extends Component {
 			return (
 				<div className="cardViews" key={index}>
 					<Card shadow={0} style={cardStyle} className="weatherCards">
-						<CardTitle className="weatherCardTitle" expand style={{background: 'url(./app/images/'+ `${img}` +'.png)' + ' bottom right 15% no-repeat #46B6AC'}}>
+						<CardTitle className="weatherCardTitle" expand style={{background: 'url(./app/images/'+ `${img}` +'.png)' + ' right 5% bottom 20% no-repeat #46B6AC'}}>
 							{temp} °C
 						</CardTitle>
 						<CardText>
