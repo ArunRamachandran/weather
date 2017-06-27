@@ -2,6 +2,7 @@
 
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import Loader from './Loader.jsx';
 import {Card, CardTitle, CardText, CardActions, Button} from 'react-mdl';
 import '../stylesheets/forecastingZone.scss';
 
@@ -96,7 +97,7 @@ export default class ForecastingZone extends Component {
 
 		return (
 				<div className="forecastingLayout">
-					{this.props.weather ? this.renderData(this.props.weather) : 'Loading'}
+					{this.props.weather ? this.renderData(this.props.weather) : <Loader/>}
 				</div>
 		);
 
