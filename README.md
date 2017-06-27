@@ -1,6 +1,7 @@
 # Weather
 
 A weather forecasting web application, created using React, Flux & ES6
+![alt text](https://github.com/ArunRamachandran/weather/blob/master/app/images/Screenshot.png)
 
 ## Getting Started
 
