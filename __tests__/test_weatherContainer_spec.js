@@ -12,10 +12,11 @@ describe('Test WeatherContainer Component', () => {
 		expect(container.hasClass('container_wraper')).toEqual(true);
 	});
 
-	it('It should contain the location information', () => {
-		const container = shallow(<WeatherContainer/>);
-		const p = container.find('.location');
-		expect(p.text()).toEqual('Bangalore, IN');
+	it('It should contain the location & date information', () => {
+		const container = mount(<WeatherContainer/>);
+		const list = container.find('p');
+		expect(list.length).toEqual(2);
+		expect(list.first().text()).toEqual('Bangalore, IN');
 	});
 
 	it('Component should invoke the function to fetch data', () => {
