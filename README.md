@@ -4,6 +4,8 @@ A weather forecasting web application, created using React, Flux & ES6. [Demo](h
 
 ![alt text](https://github.com/ArunRamachandran/weather/blob/master/app/images/Screenshot.png)
 
+![alt text](https://github.com/ArunRamachandran/weather/blob/master/app/images/Screenshot2.png)
+
 ## Getting Started
 
 These instructions will get you a copy of the project up & running on your local machine for development & testing purpose. 
