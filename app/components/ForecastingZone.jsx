@@ -14,7 +14,8 @@ const cardStyle = {
 export default class ForecastingZone extends Component {
 
 	static PropTypes = {
-		weather: PropTypes.array
+		weather: PropTypes.array,
+		enableDetailedView: PropTypes.func.isRequired
 	};
 
 	constructor (props) {
@@ -72,7 +73,7 @@ export default class ForecastingZone extends Component {
 			const img = this.getMatchingIcons(forecastingData.weather[0].main);
 			return (
 				<div className="cardViews" key={index}>
-					<Card shadow={0} style={cardStyle} className="weatherCards">
+					<Card shadow={0} style={cardStyle} className="weatherCards" onClick={() => {this.props.enableDetailedView(index)}}>
 						<CardTitle className="weatherCardTitle" expand style={{background: 'url(./app/images/'+ `${img}` +'.png)' + ' right 5% bottom 20% no-repeat #46B6AC'}}>
 							{temp} °C
 						</CardTitle>
