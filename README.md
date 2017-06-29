@@ -52,7 +52,8 @@ As of now, the application will fetch the data from OpenWeatherMapApi & display 
 
 Planning to make these changes in future, in order to improve the user experience.
 
-* An option to view the complete weather forecast details of a day when user click on any of the given date. Will implement an overlay / popup & display the data within the container
+* An option to view the complete weather forecast details of a day when user click on any of the given date. Will implement an overlay / popup & display the data within the container [ This feature has already implemented ]
 
 * An option to forecast data according to a users choice. This functionality will enable user to choose their own favourite place in order to forecast weather.
 
+* Optimize the UI for different mobile / tablet / desktop devices
