@@ -5,6 +5,33 @@ import ForecastingZone from '../app/components/ForecastingZone.jsx';
 
 describe('Test ForecastingZone Component layout', () => {
 
+	const sample_props = [
+		{forecastingDate: '27-06-2017', 
+		 data: [
+		 	{
+		 		main: {
+		 			rnd_level: 923.27,
+					humidity:74,
+					pressure:923.27,
+					sea_level:1018.71,
+					temp:300.71,
+					temp_kf:2.76,
+					temp_max:300.71,
+					temp_min:297.947
+		 		},
+		 		weather: [
+		 			{
+		 				description: "light rain",
+		 				icon: "10d",
+		 				id: 500,
+		 				main:"Rain"
+		 			}
+		 		]
+		 	}
+		 ]
+		}
+	];
+
 	it('Should have expeted class associated with it', () => {
 		const container = shallow(<ForecastingZone/>);
 		expect(container).toBeDefined();
@@ -24,38 +51,19 @@ describe('Test ForecastingZone Component layout', () => {
 	});
 
 	it('Should render card view when the compoent receives props', () => {
-		const sample_props = [
-					{forecastingDate: '27-06-2017', 
-					 data: [
-					 	{
-					 		main: {
-					 			rnd_level: 923.27,
-								humidity:74,
-								pressure:923.27,
-								sea_level:1018.71,
-								temp:300.71,
-								temp_kf:2.76,
-								temp_max:300.71,
-								temp_min:297.947
-					 		},
-					 		weather: [
-					 			{
-					 				description: "light rain",
-					 				icon: "10d",
-					 				id: 500,
-					 				main:"Rain"
-					 			}
-					 		]
-					 	}
-					 ]
-					}
-				];
 		const container = mount(<ForecastingZone weather={sample_props}/>);
 		expect(container.props().weather).toBeDefined();
 		expect(container.find('Card').length).toBe(1);
 		expect(container.find('CardTitle').length).toBe(1);
 		expect(container.find('CardText').length).toBe(1);
-	})
+	});
+
+	it ('Should invoke call back function once we click on the card', () => {
+		let enableDetailedView = jest.fn();
+		const container = mount(<ForecastingZone weather={sample_props} enableDetailedView={enableDetailedView}/>);
+		container.find('Card').simulate('click');
+		expect(enableDetailedView).toBeCalled();
+	});
 });
 
 
