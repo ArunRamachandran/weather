@@ -70,7 +70,7 @@ export default class ForecastingZone extends Component {
 			const date = weather.forecastingDate;
 			console.log("weather : ", weather, "weather.data[0] : ", weather.data[0]);
 			const forecastingData = weather.data[0];
-			if (forecastingData) {
+			if (forecastingData) { // Process only if data is present
 				const temp = (forecastingData.main.temp - 273.15).toFixed(2); // converting temp to degree celsius 
 				const img =  this.getMatchingIcons(forecastingData.weather[0].main);
 				return (
