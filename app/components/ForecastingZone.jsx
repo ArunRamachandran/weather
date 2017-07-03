@@ -68,27 +68,30 @@ export default class ForecastingZone extends Component {
 	renderData = (data) => {		
 		let contents = data.map((weather, index) => {
 			const date = weather.forecastingDate;
+			console.log("weather : ", weather, "weather.data[0] : ", weather.data[0]);
 			const forecastingData = weather.data[0];
-			const temp = (forecastingData.main.temp - 273.15).toFixed(2); // converting temp to degree celsius 
-			const img = this.getMatchingIcons(forecastingData.weather[0].main);
-			return (
-				<div className="cardViews" key={index}>
-					<Card shadow={0} style={cardStyle} className="weatherCards" onClick={() => {this.props.enableDetailedView(index)}}>
-						<CardTitle className="weatherCardTitle" expand style={{background: 'url(./app/images/'+ `${img}` +'.png)' + ' right 5% bottom 20% no-repeat #46B6AC'}}>
-							{temp} °C
-						</CardTitle>
-						<CardText>
-							<div className="weatherCardText">
-								<span className="weatherCardText1">{this.getDate(date)}, {date}</span>
-								<span className="weatherCardText2">{forecastingData.weather[0].description}</span>
-								<span className="weatherCardText4">Humidity : {forecastingData.main.humidity}</span>
-							</div>
-	    			</CardText>
-	    			<CardActions border>
-	    			</CardActions>
-					</Card>
-				</div>
-			);
+			if (forecastingData) {
+				const temp = (forecastingData.main.temp - 273.15).toFixed(2); // converting temp to degree celsius 
+				const img =  this.getMatchingIcons(forecastingData.weather[0].main);
+				return (
+					<div className="cardViews" key={index}>
+						<Card shadow={0} style={cardStyle} className="weatherCards" onClick={() => {this.props.enableDetailedView(index)}}>
+							<CardTitle className="weatherCardTitle" expand style={{background: 'url(./app/images/'+ `${img}` +'.png)' + ' right 5% bottom 20% no-repeat #46B6AC'}}>
+								{temp} °C
+							</CardTitle>
+							<CardText>
+								<div className="weatherCardText">
+									<span className="weatherCardText1">{this.getDate(date)}, {date}</span>
+									<span className="weatherCardText2">{forecastingData.weather[0].description}</span>
+									<span className="weatherCardText4">Humidity : {forecastingData.main.humidity}</span>
+								</div>
+		    			</CardText>
+		    			<CardActions border>
+		    			</CardActions>
+						</Card>
+					</div>
+				);
+			}
 		});
 		return contents;
 	}
