@@ -60,7 +60,6 @@ export default class WeatherContainer extends Component {
 
 	render () {
 		const today = new Date().toLocaleString();
-		alert(navigator.userAgent);
 		
 		return (
 			<div className="container_wraper">
